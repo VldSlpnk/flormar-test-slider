@@ -33,7 +33,7 @@ function fts_product_slider($atts) {
 
     $args = array(
         'post_type'      => 'product',
-        'posts_per_page' => 10,
+        'posts_per_page' => -1,
     );
 
     $meta_query = array();
