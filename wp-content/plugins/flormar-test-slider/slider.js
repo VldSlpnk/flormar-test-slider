@@ -6,8 +6,17 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev',
     },
     slidesPerView: 2,
+    spaceBetween: 10,
     breakpoints: {
-      485: { slidesPerView: 4 },
+      700: {
+        slidesPerView: 4,
+      },
+      1700: {
+        slidesPerView: 5,
+      },
+      1800: {
+        slidesPerView: 6,
+      },
     },
   })
 })

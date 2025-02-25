@@ -62,22 +62,35 @@ function fts_product_slider($atts) {
     $query = new WP_Query($args);
     ob_start();
     ?>
+
+    <div class="container">
+
     <div class="fts-slider swiper">
     <h2>המוצרים הנמכרים ביותר </h2>
 
         <div class="swiper-wrapper">
             <?php while ($query->have_posts()) : $query->the_post(); global $product; ?>
+                
                 <div class="swiper-slide">
                     <a href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail('medium'); ?>
+                        <div class="product-line"></div>
                         <h3><?php the_title(); ?></h3>
-                        <p><?php echo get_woocommerce_currency_symbol() . $product->get_price(); ?></p>
+                        <p>
+                    <?php 
+                    $price = $product->get_price();
+                    echo get_woocommerce_currency_symbol() . number_format($price, 2);
+                    ?>
+                </p>
                     </a>
                 </div>
             <?php endwhile; ?>
+            
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
     </div>
     <?php
     wp_reset_postdata();
