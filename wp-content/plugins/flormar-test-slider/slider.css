@@ -114,9 +114,16 @@ select {
 }
 
 .swiper-slide a h3 {
+  font-family: Arial;
+  font-size: 20px;
   padding-top: 40px;
 }
 .swiper-slide a p {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 27.6px;
+
   padding: 37px 0 39px;
 }
 .product-line {
@@ -162,5 +169,21 @@ select {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
+  .swiper-slide a h3 {
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.4px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .swiper-slide a p {
+    padding: 20px 0 25px;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20.7px;
   }
 }
